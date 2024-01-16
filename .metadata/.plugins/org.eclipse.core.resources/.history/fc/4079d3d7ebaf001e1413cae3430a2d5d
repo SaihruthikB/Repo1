@@ -1,0 +1,14 @@
+package arraysClass;
+
+public class Java_Arrays {
+	 
+	public static void main(String[] args) {
+		
+		 String[] a= {"sai hruthik", "a", "b", "c"};
+		 String[] b = new String[10];
+		 System.out.println(b);
+		 
+		
+	}
+
+}

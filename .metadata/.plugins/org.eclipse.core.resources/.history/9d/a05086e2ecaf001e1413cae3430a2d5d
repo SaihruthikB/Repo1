@@ -1,0 +1,23 @@
+package arraysClass;
+
+public class Java_Arrays {
+	 
+	public static void main(String[] args) {
+		
+		 String[] a= {"sai hruthik", "a", "b", "c"};
+		 String[] b = new String[10];
+		 for (int i=0;i<=3;i++)
+		 {
+			 System.out.println(a[i]);
+		 
+			 if(a[i]=="sai hruthik")
+			 {
+				 System.out.println(a.length);
+			 }
+		 }
+		 
+		 
+	}
+	}
+
+

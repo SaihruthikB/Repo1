@@ -1,0 +1,46 @@
+package lunchBrowser;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class ChromeBrowser {
+
+	public static void main(String[] args) {
+		WebDriver d1 = new ChromeDriver();
+	       d1.get("https://google.com");
+	       WebElement searchInput = d1.findElement(By.name("q"));
+	       searchInput.sendKeys("https://www.linkedin.com");
+	       searchInput.submit();
+
+	        // Click on the LinkedIn profile link in the search results
+	       //WebDriverWait wait = new WebDriverWait(d1, 10);
+	       WebElement linkedInLink = d1.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div/div/div/div[1]/div/span/a/h3"));
+	       linkedInLink.click();
+	        // Find the username and password input fields and the login button
+	        WebElement usernameInput = d1.findElement(By.id("username"));
+	        WebElement passwordInput = d1.findElement(By.id("password"));
+	        WebElement loginButton = d1.findElement(By.xpath("//button[text()='Sign in']"));
+
+	        // Enter your LinkedIn username and password
+	        usernameInput.sendKeys("YourUsername");
+	        passwordInput.sendKeys("YourPassword");
+
+	        // Click the login button
+	        loginButton.click();
+
+	        // Wait for a moment to see the result
+	        try {
+	            Thread.sleep(5000);
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	       
+
+
+	}
+
+}

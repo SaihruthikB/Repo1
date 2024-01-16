@@ -1,0 +1,36 @@
+package lunchBrowser;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ChromeBrowser {
+
+	public static void main(String[] args) {
+		WebDriver d1 = new ChromeDriver();
+	       d1.get("https://google.com");
+	       WebElement searchInput = d1.findElement(By.name("q"));
+	       searchInput.sendKeys("https://www.linkedin.com/in/saihruthik-bolly-036240142/");
+	       searchInput.submit();
+	    // Wait for a moment to allow search results to load
+	        try {
+	            Thread.sleep(2000);
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	        // Click on the LinkedIn profile link in the search results
+	        WebElement linkedInLink = d1.findElement(By.xpath("//a[contains(@href,'linkedin.com/in')]"));
+	        linkedInLink.click();
+
+	        // Wait for a moment to see the LinkedIn profile page
+	        try {
+	            Thread.sleep(5000);
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+
+
+	}
+
+}

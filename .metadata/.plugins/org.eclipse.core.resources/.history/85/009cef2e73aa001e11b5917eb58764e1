@@ -1,0 +1,24 @@
+package lunchBrowser;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ChromeBrowser {
+
+	public static void main(String[] args) {
+		WebDriver d1 = new ChromeDriver();
+	       d1.get("https://google.com");
+	       WebElement searchInput = d1.findElement(By.name("q"));
+	       searchInput.sendKeys("https://www.linkedin.com");
+	       searchInput.submit();
+
+	        // Click on the LinkedIn profile link in the search results
+	       WebElement linkedInLink = d1.findElement(By.xpath("//a[text()='LinkedIn: Log In or Sign Up']"));
+	       linkedInLink.click();
+
+
+	}
+
+}

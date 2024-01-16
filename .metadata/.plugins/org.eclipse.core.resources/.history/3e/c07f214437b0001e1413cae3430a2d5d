@@ -1,0 +1,17 @@
+package arraysClass;
+
+public class ForEachInArrays {
+	
+	static String name[] = {"sai Hruthik","bunny","ina"};
+	
+	public static String foreach()
+	{
+		for(String nam : name)
+		{
+			System.out.println(name);
+		}
+	}
+	return name
+			
+
+}

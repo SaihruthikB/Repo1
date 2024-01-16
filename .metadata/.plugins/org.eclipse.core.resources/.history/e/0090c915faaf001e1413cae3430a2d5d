@@ -1,0 +1,7 @@
+package arraysClass;
+
+public class SecondLargestElementInArray {
+	
+	static int lenght;
+
+}

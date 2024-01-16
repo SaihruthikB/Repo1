@@ -1,0 +1,34 @@
+package arraysClass;
+
+public class Java_Arrays {
+	 
+	public static void main(String[] args) {
+		
+            int a[] = {10,2,5,20,1,100};
+            int n=a.length;
+            int tem = 0;
+
+            for(int i=0; i<n;i++)
+            {
+            	for(int j=i+1;j<n;j++)
+            	{
+            		if(a[i]>a[j])
+            		{
+            			tem = a[i];
+            			a[i] = a[j];
+            			a[j] = tem;
+            			
+            		}
+            	
+            	}
+            	
+            	System.out.println(a[i]);
+            }
+            System.out.println("second largest element in the list is");
+            System.out.println(a[n-2]);
+
+
+	}
+	}
+
+

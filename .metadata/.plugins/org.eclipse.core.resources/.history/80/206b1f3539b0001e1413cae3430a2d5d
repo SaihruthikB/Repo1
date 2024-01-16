@@ -1,0 +1,14 @@
+package arraysClass;
+
+public class MethodCalling {
+	
+	public static int MethodCall(int a, int b, int c)
+	
+	
+	{
+		
+		return 1;
+	}
+	
+
+}
